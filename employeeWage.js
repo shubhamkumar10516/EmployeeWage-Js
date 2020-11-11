@@ -34,4 +34,17 @@ const WAGE_PER_HOUR = 20 ; // Declaring as global for using wage calculator func
     console.log("Employee Wage = " + empWage);
 }
 
+// calculate wage for 20 days usng for loop
+{
+    let empHrs = 0;
+    const WORKING_DAYS = 20 ;
+    for(let i = 0; i <= WORKING_DAYS; i++) {
+        let empCheck = Math.floor(Math.random() * 10)%3;
+        empHrs = empHrs + getWorkingHours(empCheck);
+    }
+    let empWage = empHrs * WAGE_PER_HOUR ;
+    console.log("Aggregate Wage for 20 days = " + empWage);
+}
+
+
 
