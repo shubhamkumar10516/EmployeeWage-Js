@@ -46,5 +46,16 @@ const WAGE_PER_HOUR = 20 ; // Declaring as global for using wage calculator func
     console.log("Aggregate Wage for 20 days = " + empWage);
 }
 
+//Calculate for particular limit: either 20 days or 160 Hours: using while loop
+{
+    let empHrs = 0 ;
+    let workingDay = 0 ;
+    while(empHrs <= 160 && workingDay <= 20) {
+        let empCheck = Math.floor(Math.random() * 10)%3;
+        empHrs = empHrs + getWorkingHours(empCheck);
+        workingDay++ ;
+    }
+    console.log("Wage for Max 20 days or Max 160 hrs is = "+ empHrs*WAGE_PER_HOUR);
+}
 
 
